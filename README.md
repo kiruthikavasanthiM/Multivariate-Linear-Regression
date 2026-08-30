@@ -6,26 +6,32 @@ To write a python program to implement multivariate linear regression and predic
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
 ### Step1
-<br>
+Initialize the data – Input the independent variables \(X_1, X_2, ..., X_n\) and dependent variable \(Y\).
 
 ### Step2
-<br>
+Initialize coefficients – Set \(b_0, b_1, b_2, ..., b_n\) to initial values (usually 0).
 
 ### Step3
-<br>
+Train the model – Calculate predicted value
 
+$$ \hat{Y}=b_0+b_1X_1+b_2X_2+\cdots+b_nX_n $$
+
+and adjust the coefficients to minimize the Mean Squared Error (MSE).
 ### Step4
-<br>
-
-### Step5
-<br>
+Predict output – Use the trained coefficients with new input values to calculate the predicted \(Y\).
 
 ## Program:
 ```
-
-
-
-
+import pandas as pd
+from sklearn import linear_model
+df=pd.read_csv("car.csv")
+x=df[["Volume","Weight"]]
+y=df["CO2"]
+regression = linear_model.LinearRegression()
+regression.fit(x,y)
+print(regression.coef_)
+print(regression.intercept_)
+print("Predicted Value:",regression.predict([[3300,1300]]))
 
 
 ```
@@ -33,7 +39,8 @@ To write a python program to implement multivariate linear regression and predic
 
 ### Insert your output
 
-<br>
+<img width="1460" height="482" alt="Screenshot 2026-08-30 125207" src="https://github.com/user-attachments/assets/8f32d29c-ea29-4bbd-aced-bc78103cabd4" />
+
 
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
