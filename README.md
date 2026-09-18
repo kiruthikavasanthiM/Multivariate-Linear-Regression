@@ -5,21 +5,11 @@ To write a python program to implement multivariate linear regression and predic
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
-### Step1
-Initialize the data – Input the independent variables \(X_1, X_2, ..., X_n\) and dependent variable \(Y\).
-
-### Step2
-Initialize coefficients – Set \(b_0, b_1, b_2, ..., b_n\) to initial values (usually 0).
-
-### Step3
-Train the model – Calculate predicted value
-
-$$ \hat{Y}=b_0+b_1X_1+b_2X_2+\cdots+b_nX_n $$
-
-and adjust the coefficients to minimize the Mean Squared Error (MSE).
-### Step4
-Predict output – Use the trained coefficients with new input values to calculate the predicted \(Y\).
-
+## step1: Import the required libraries and load the California Housing dataset
+## step2: Define the feature matrix X and target vector y.
+## step3: Split the dataset into training and testing sets using train_test_split().
+## step4: Create and train the Linear Regression model using the training data.
+## step5: Predict the output, calculate the variance score, and plot the residual errors.
 ## Program:
 ```
 import pandas as pd
